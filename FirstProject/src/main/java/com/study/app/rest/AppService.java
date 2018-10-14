@@ -22,7 +22,7 @@ public class AppService {
 	@Autowired
 	AppManager appManager;
 
-	@RequestMapping(value = "medisoft/user/create", method = RequestMethod.PUT, consumes = "application/json")
+	@RequestMapping(value = "mrInfo/user/create", method = RequestMethod.PUT, consumes = "application/json")
 	public String enrollUser(@RequestBody MrInfo user) {
 		appManager.enrollUser(user);
 		return "User Enrolled Sucessfully";

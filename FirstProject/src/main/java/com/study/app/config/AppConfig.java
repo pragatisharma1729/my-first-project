@@ -3,6 +3,8 @@
  */
 package com.study.app.config;
 
+import org.dozer.DozerBeanMapper;
+import org.dozer.Mapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -24,6 +26,11 @@ public class AppConfig {
 	@Bean
 	public AppRepo appRepo() {
 		return new AppRepo();
+	}
+
+	@Bean
+	public Mapper mapper() {
+		return new DozerBeanMapper();
 	}
 
 }
